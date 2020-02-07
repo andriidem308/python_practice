@@ -129,3 +129,6 @@ dmypy.json
 .pyre/
 .idea/
 
+/test_folder/
+/matfiz_tasks/Topic25_Sockets/sockets_test/
+/matfiz_tasks/Topic25_Sockets/backup25_9/

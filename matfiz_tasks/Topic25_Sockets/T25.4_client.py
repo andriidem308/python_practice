@@ -10,12 +10,11 @@ host, port = socket.gethostname(), 12345
 
 sock.connect((host, port))
 sock.send(pattern.encode())
-
 msg = sock.recv(1024).decode()
 print(msg)
 
 for line in file:
-    sock.send(line.split()[0].encode())
+    sock.send(' '.join(line.split()).encode())
     msg = sock.recv(1024).decode()
     print(msg)
 
