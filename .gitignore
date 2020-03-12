@@ -129,6 +129,13 @@ dmypy.json
 .pyre/
 .idea/
 
-/test_folder/
 /matfiz_tasks/Topic25_Sockets/sockets_test/
 /matfiz_tasks/Topic25_Sockets/backup25_9/
+/pytutorial_basics/learning_documents/
+/programming_hw_4s/tests/
+/university_else/
+/test_folder/
+/instagram/
+/e-olymp/
+
+/myalgorithms/test_sort.py
