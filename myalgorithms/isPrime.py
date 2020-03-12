@@ -17,8 +17,8 @@ def get_digit_sum(number):
 
 
 k = 0
-for i in range(1000, 10000):
-    if is_prime(i) and is_prime(get_digit_sum(i)):
-        k += 1
+for i in range(10, 1000):
+    if is_prime(i):
+        print(i)
 
 print(k)

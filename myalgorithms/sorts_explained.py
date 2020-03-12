@@ -1,5 +1,5 @@
 # Алгоритмы сортировки
-# Sorting algorithms
+# Sorting myalgorithms
 
 
 # Check if arr is sorted
@@ -50,7 +50,9 @@ def binary_search(arr: list, element):
 # -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 # Пузырьковая сортировка
 # Bubble Sort
-def bubble_sort(arr: list):
+
+# Realization 1
+def bubble_sort_1(arr: list):
     """
     :param arr: list of elements
     :return: sorted list
@@ -68,6 +70,16 @@ def bubble_sort(arr: list):
                 # Устанавливаем swapped в True для следующей итерации
                 # Set swapped True for next iteration
                 swapped = True
+
+
+# Realization 2
+def bubble_sort_2(arr: list):
+    n = len(arr)
+
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
 
 
 # -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -241,14 +253,17 @@ def merge_sort_2(arr: list):
 
         return _sorted_list
 
-    if len(arr) <= 1:
-        return
-    mi = len(arr) // 2
-    left = [arr[i] for i in range(0, mi)]
-    right = [arr[i] for i in range(mi, len(arr))]
+    if len(arr) <= 1: return
+
+    middle = len(arr) // 2
+    left = [arr[i] for i in range(0, middle)]
+    right = [arr[i] for i in range(middle, len(arr))]
+
     merge_sort_2(left)
     merge_sort_2(right)
+
     central = _merge(left, right)
+
     for i in range(len(arr)):
         arr[i] = central[i]
 
@@ -313,4 +328,3 @@ def hoar_sort_2(arr: list):
 
 
 # -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-

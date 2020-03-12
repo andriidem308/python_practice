@@ -81,5 +81,5 @@ while True:
 print('all directories have been added to the list')
 print('now we have to create a backup in gotten directory from directories in the list...')
 backup_directories(DIRECTORIES, BACKUPDIR)
-print('So,')
+print('Congratulations! Backup created!')
 print("...\n>>> Disconnected from the", address)
