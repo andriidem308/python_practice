@@ -52,16 +52,25 @@ class BinaryTree:
         self.right_child = None
         
     
-
-
-
-
 def DFS(root):
     print(root.key)
     
-    if root.has_left(): DFS(root.left_child)
-    if root.has_right(): DFS(root.right_child)
+    if root.has_left(): 
+        DFS(root.left_child)
+        
+    if root.has_right():
+        DFS(root.right_child)
 
-    
 def BFS(root):
-    q = Queue() 
+    q = Queue()     
+    q.enqueue(root)      
+    
+    while not q.empty():
+        node = q.dequeue()
+        print(node.key)         
+        
+        if node.hasLeft():             
+            q.enqueue(node.left_child)    
+        
+        if node.hasRight():
+            q.enqueue(node.right_child) 
